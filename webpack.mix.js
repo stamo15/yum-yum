@@ -19,13 +19,13 @@ mix.js('resources/js/back.js', 'public/js/back')
 
     ], 'public/js/back/main.js')
     .scripts([
-
+        
     ], 'public/js/front/main.js')
     .styles([
 
     ], 'public/css/back/main.css')
     .styles([
-
+        'public/css/front/style.css'
     ], 'public/css/front/main.css');
 
 //Live reload of browser

@@ -4,7 +4,7 @@
 
             <!-- Brand -->
             <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-                <strong></strong>
+                <strong>{{ config('app.name') }}</strong>
             </a>
 
             <!-- Collapse -->
@@ -19,39 +19,33 @@
                 <!-- Left -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="#">
+                            Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank">
-                            Free download
+                        <a class="nav-link" href="#">
+                            Recipes
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
+                        <a class="nav-link" href="#">
+                            Blog
+                        </a>
                     </li>
                 </ul>
 
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons">
-                    <li class="nav-item">
-                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
+                    <li class="nav-item mr-4">
+                        <a href="#" class="nav-link border border-light rounded">
+                            <i class="fab fa-github mr-2"></i>Sign up
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
-                            target="_blank">
-                            <i class="fab fa-github mr-2"></i>MDB GitHub
+                    <li class="nav-item mr-4">
+                        <a href="#" class="nav-link border border-light rounded">
+                            <i class="fab fa-download mr-2"></i>Sign in
                         </a>
                     </li>
                 </ul>
