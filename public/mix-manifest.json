@@ -1,0 +1,10 @@
+{
+    "/js/back/back.js": "/js/back/back.js",
+    "/css/back/back-custom.css": "/css/back/back-custom.css",
+    "/css/front/front-custom.css": "/css/front/front-custom.css",
+    "/js/front/front.js": "/js/front/front.js",
+    "/js/back/main.js": "/js/back/main.js",
+    "/js/front/main.js": "/js/front/main.js",
+    "/css/back/main.css": "/css/back/main.css",
+    "/css/front/main.css": "/css/front/main.css"
+}

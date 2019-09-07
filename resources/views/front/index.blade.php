@@ -1,0 +1,1 @@
+@extends('front.layouts.front-app')
