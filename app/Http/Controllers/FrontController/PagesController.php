@@ -87,11 +87,11 @@ class PagesController extends Controller
     {
         // Validating form inputs
         $this->validate($request, [
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'password' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'password' => 'required|string|min:8',
+            'email' => 'required|email',
+            'phone' => 'required|string',
             'subscribed' => 'required'
         ]);
         return view('front.pages.blog-post');
