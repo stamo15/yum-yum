@@ -55,3 +55,10 @@ body,
 .page-footer {
     background-color: #212121; 
 }
+
+/* Registration page */
+
+#register-section {
+    background: url('../../images/front/index/bread-meal-large.jpg') center no-repeat;
+    background-size: cover;
+}

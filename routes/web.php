@@ -21,7 +21,9 @@ Route::group(['namespace' => 'FrontController'], function(){
     Route::get('/home', 'HomeController@home')->name('home');
     Route::get('/', 'PagesController@index')->name('index');
     Route::get('/register', 'PagesController@register')->name('front.register');
+    Route::post('/register', 'PagesController@signup')->name('front.signup');
     Route::get('/login', 'PagesController@login')->name('front.login');
+    Route::post('/login', 'PagesController@signin')->name('front.signin');
     Route::get('/recipes', 'PagesController@recipes')->name('front.recipes');
     Route::get('/recipes/{slug}', 'PagesController@recipeSingle')->name('front.recipes.single');
     Route::get('/blog', 'PagesController@blog')->name('front.blog');

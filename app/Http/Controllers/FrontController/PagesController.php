@@ -15,7 +15,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('front.index');
+        return view('front.pages.index');
     }
     
     /**
@@ -25,7 +25,7 @@ class PagesController extends Controller
      */
     public function register()
     {
-        return view('front.register');
+        return view('front.pages.register');
     }
     
     /**
@@ -35,7 +35,7 @@ class PagesController extends Controller
      */
     public function login()
     {
-        return view('front.login');
+        return view('front.pages.login');
     }
     
     /**
@@ -45,7 +45,7 @@ class PagesController extends Controller
      */
     public function recipes()
     {
-        return view('front.recipes');
+        return view('front.pages.recipes');
     }
     
     /**
@@ -55,7 +55,7 @@ class PagesController extends Controller
      */
     public function recipeSingle()
     {
-        return view('front.recipe-single');
+        return view('front.pages.recipe-single');
     }
     
     /**
@@ -65,7 +65,7 @@ class PagesController extends Controller
      */
     public function blog()
     {
-        return view('front.blog');
+        return view('front.pages.blog');
     }
     
     /**
@@ -75,6 +75,35 @@ class PagesController extends Controller
      */
     public function blogPost()
     {
-        return view('front.blogPost');
+        return view('front.pages.blog-post');
+    }
+    
+    /**
+     * Process registration form.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function signup(Request $request)
+    {
+        // Validating form inputs
+        $this->validate($request, [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'password' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'subscribed' => 'required'
+        ]);
+        return view('front.pages.blog-post');
+    }
+    
+    /**
+     * Process login form.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function signin(Request $request)
+    {
+        return view('front.pages.blog-post');
     }
 }
