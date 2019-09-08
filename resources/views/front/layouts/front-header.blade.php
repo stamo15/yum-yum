@@ -3,8 +3,8 @@
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-                <strong>{{ config('app.name') }}</strong>
+            <a class="navbar-brand" href="{{ route('index') }}">
+                <strong>{{ config('app.name', 'Yum-Yum') }}</strong>
             </a>
 
             <!-- Collapse -->
@@ -19,18 +19,18 @@
                 <!-- Left -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('index') }}">
                             Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('front.recipes') }}">
                             Recipes
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('front.blog') }}">
                             Blog
                         </a>
                     </li>
@@ -39,12 +39,12 @@
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item mr-4">
-                        <a href="#" class="nav-link border border-light rounded">
+                        <a href="{{ route('front.register') }}" class="nav-link border border-light rounded">
                             <i class="fab fa-github mr-2"></i>Sign up
                         </a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a href="#" class="nav-link border border-light rounded">
+                        <a href="{{ route('front.login') }}" class="nav-link border border-light rounded">
                             <i class="fab fa-download mr-2"></i>Sign in
                         </a>
                     </li>

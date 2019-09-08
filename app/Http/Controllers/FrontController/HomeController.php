@@ -4,6 +4,9 @@ namespace App\Http\Controllers\FrontController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Auth;
+
+use App\Model\Account\User;
 
 class HomeController extends Controller
 {
@@ -24,6 +27,12 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view('front.index');
+        dd(Auth::user()->role());
+        if(Auth::user()->role()->display_name === 'user'){
+            return view('back.client.home');
+        } else if(Auth::user()->role()->display_name === 'webmaster') {
+            return view('back.admin.home');
+        }
+        
     }
 }

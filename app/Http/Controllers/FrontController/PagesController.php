@@ -4,9 +4,17 @@ namespace App\Http\Controllers\FrontController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+use Auth;
+
+use App\Model\Account\User;
+use App\Model\Account\UserRole;
+use App\Traits\RegisterUserTrait;
 
 class PagesController extends Controller
 {
+    // Import user registration method
+    use RegisterUserTrait;
     
     /**
      * Show the application home page.
@@ -85,16 +93,9 @@ class PagesController extends Controller
      */
     public function signup(Request $request)
     {
-        // Validating form inputs
-        $this->validate($request, [
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'password' => 'required|string|min:8',
-            'email' => 'required|email',
-            'phone' => 'required|string',
-            'subscribed' => 'required'
-        ]);
-        return view('front.pages.blog-post');
+        $user = $this->addUser($request);
+        Auth::login($user);
+        return redirect()->route('home');
     }
     
     /**
@@ -104,6 +105,23 @@ class PagesController extends Controller
      */
     public function signin(Request $request)
     {
-        return view('front.pages.blog-post');
+        $credentials = $request->only('email', 'password');
+        $remember = True;
+
+        if (Auth::attempt($credentials, $remember)) {
+            // Authentication passed...
+            return redirect()->intended('home');
+        }
+    }
+    
+    /**
+     * Log users out of the application.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('front.login');
     }
 }

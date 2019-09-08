@@ -23,6 +23,7 @@ Route::group(['namespace' => 'FrontController'], function(){
     Route::get('/register', 'PagesController@register')->name('front.register');
     Route::post('/register', 'PagesController@signup')->name('front.signup');
     Route::get('/login', 'PagesController@login')->name('front.login');
+    Route::get('/logout', 'PagesController@logout')->name('front.logout');
     Route::post('/login', 'PagesController@signin')->name('front.signin');
     Route::get('/recipes', 'PagesController@recipes')->name('front.recipes');
     Route::get('/recipes/{slug}', 'PagesController@recipeSingle')->name('front.recipes.single');

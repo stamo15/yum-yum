@@ -2,11 +2,11 @@
 
     <!--Call to action-->
     <div class="pt-4">
-        <a class="btn btn-outline-white" href="#" role="button">
+        <a class="btn btn-outline-white" href="{{ route('front.recipes') }}" role="button">
             Explore recipes
             <i class="fas fa-download ml-2"></i>
         </a>
-            <a class="btn btn-outline-white" href="#" role="button">
+            <a class="btn btn-outline-white" href="{{ route('front.register') }}" role="button">
             Create an account
             <i class="fas fa-graduation-cap ml-2"></i>
         </a>
