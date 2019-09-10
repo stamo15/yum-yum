@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use DB;
 
 use App\Model\Account\User;
@@ -23,10 +24,10 @@ trait RegisterUserTrait
         $user = new User;
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
-        $user->password = $request->input('password');
+        $user->password = Hash::make($request->input('password'));
         $user->email = $request->input('email');
         $user->phone = $request->input('phone');
-        $user->role_id = 2;
+        $user->user_role_id = 2;
         
         $user->save();
         

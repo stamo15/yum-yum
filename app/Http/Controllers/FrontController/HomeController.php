@@ -27,11 +27,11 @@ class HomeController extends Controller
      */
     public function home()
     {
-        dd(Auth::user()->role());
-        if(Auth::user()->role()->display_name === 'user'){
-            return view('back.client.home');
-        } else if(Auth::user()->role()->display_name === 'webmaster') {
-            return view('back.admin.home');
+        //dd(Auth::user()->userRole());
+        if(Auth::user()->userRole->name === 'user'){
+            return view('back.client.pages.home');
+        } else if(Auth::user()->userRole->name === 'webmaster') {
+            return view('back.admin.pages.home');
         }
         
     }
