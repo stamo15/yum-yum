@@ -22,7 +22,7 @@ mix.js('resources/js/back.js', 'public/js/back')
         
     ], 'public/js/front/main.js')
     .styles([
-
+        'public/css/back/style.css'
     ], 'public/css/back/main.css')
     .styles([
         'public/css/front/style.css'

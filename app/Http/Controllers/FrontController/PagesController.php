@@ -27,6 +27,16 @@ class PagesController extends Controller
     }
     
     /**
+     * Show the application about page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function about()
+    {
+        return view('front.pages.about');
+    }
+    
+    /**
      * Show the client registration page.
      *
      * @return \Illuminate\Contracts\Support\Renderable

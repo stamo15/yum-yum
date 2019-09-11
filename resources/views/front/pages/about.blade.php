@@ -1,7 +1,7 @@
 @extends('front.layouts.front-app')
 
 @section('title')
-    {{ config('app.name') }} | Recipes
+    {{ config('app.name') }} | About
 @endsection
 
 @section('additional-styles')

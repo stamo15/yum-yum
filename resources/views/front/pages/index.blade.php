@@ -38,7 +38,7 @@
                                     you are at the right place, a community of people who want to share their home recipes.
                                 </strong>
                             </p>
-                            <a href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">
+                            <a href="{{ route('front.recipes') }}" class="btn btn-outline-white btn-lg">
                                 Explore recipes
                                 <i class="fas fa-graduation-cap ml-2"></i>
                             </a>
@@ -69,7 +69,7 @@
                                     you could share it here on Yum-Yum and see people learn from you and enjoy an amazing dish.
                                 </strong>
                             </p>
-                            <a href="#" class="btn btn-outline-white btn-lg">
+                            <a href="{{ route('front.register') }}" class="btn btn-outline-white btn-lg">
                                 Create an account
                                 <i class="fas fa-graduation-cap ml-2"></i>
                             </a>
@@ -100,7 +100,7 @@
                                     to work around all those ingredients and appliances and so much more. Yum-Yum got you!
                                 </strong>
                             </p>
-                            <a href="#" class="btn btn-outline-white btn-lg">
+                            <a href="{{ route('front.blog') }}" class="btn btn-outline-white btn-lg">
                                 Read our blog
                                 <i class="fas fa-graduation-cap ml-2"></i>
                             </a>
@@ -226,11 +226,11 @@
                             <strong>Home cooks from everywhere</strong> share their amazing recipes here. 
                             You can read about them about or even save your <strong>favorite recipes.</strong> 
                         </p>
-                        <a href="#" class="btn btn-grey btn-md">
+                        <a href="{{ route('front.recipes') }}" class="btn btn-grey btn-md">
                             See recipes
                             <i class="fas fa-download ml-1"></i>
                         </a>
-                        <a href="#" class="btn btn-grey btn-md">
+                        <a href="{{ route('front.register') }}" class="btn btn-grey btn-md">
                             Create account
                             <i class="far fa-image ml-1"></i>
                         </a>

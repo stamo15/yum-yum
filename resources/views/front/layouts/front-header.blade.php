@@ -18,20 +18,37 @@
 
                 <!-- Left -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {{(Route::current()->getName() == 'index') ? 'active' : ''}}">
                         <a class="nav-link" href="{{ route('index') }}">
-                            Home
-                            <span class="sr-only">(current)</span>
+                            Home 
+                            @if (Route::current()->getName() == 'index')
+                                <span class="sr-only">(current)</span>
+                            @endif
+                            
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{(Route::current()->getName() == 'front.recipes') ? 'active' : ''}}">
                         <a class="nav-link" href="{{ route('front.recipes') }}">
                             Recipes
+                            @if (Route::current()->getName() == 'recipes')
+                                <span class="sr-only">(current)</span>
+                            @endif
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{(Route::current()->getName() == 'front.blog') ? 'active' : ''}}">
                         <a class="nav-link" href="{{ route('front.blog') }}">
                             Blog
+                            @if (Route::current()->getName() == 'blog')
+                                <span class="sr-only">(current)</span>
+                            @endif
+                        </a>
+                    </li>
+                    <li class="nav-item {{(Route::current()->getName() == 'front.about') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{ route('front.about') }}">
+                            About
+                            @if (Route::current()->getName() == 'about')
+                                <span class="sr-only">(current)</span>
+                            @endif
                         </a>
                     </li>
                 </ul>

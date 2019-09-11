@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        //dd(Auth::user()->userRole());
+        // Redirect user based on their role
         if(Auth::user()->userRole->name === 'user'){
             return view('back.client.pages.home');
         } else if(Auth::user()->userRole->name === 'webmaster') {
