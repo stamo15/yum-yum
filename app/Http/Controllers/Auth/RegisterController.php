@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\Support\Str;
 
 use App\Model\Account\User;
 use App\Http\Controllers\Controller;
@@ -72,6 +73,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'user_role_id' => 1,
             'password' => Hash::make($data['password']),
+            'api_token' => Str::random(60),
         ]);
     }
 }

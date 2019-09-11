@@ -5,6 +5,7 @@ namespace App\Traits;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use DB;
+use Illuminate\Support\Str;
 
 use App\Model\Account\User;
 use App\Model\Account\UserRole;
@@ -28,6 +29,7 @@ trait RegisterUserTrait
         $user->email = $request->input('email');
         $user->phone = $request->input('phone');
         $user->user_role_id = 2;
+        $user->api_token = Str::random(60);
         
         $user->save();
         
